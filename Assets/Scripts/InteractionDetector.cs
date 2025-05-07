@@ -8,10 +8,10 @@ public class InteractionDetector : MonoBehaviour
     public GameObject interactionIcon;
     
     private IInteractable interactableInRange = null;
-    void Start()
+    void Awake()
     {
-        interactionIcon.SetActive(false);
-        // interactionIcon.Hide(interactionIconGroup);
+        // interactionIcon.SetActive(false);
+        CanvasGroupDisplayer.Hide(interactionIconGroup);
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -25,8 +25,8 @@ public class InteractionDetector : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
         {
             interactableInRange = interactable;
-            interactionIcon.SetActive(true);
-            // interactionIcon.Show(interactionIconGroup);
+            // interactionIcon.SetActive(true);
+            CanvasGroupDisplayer.Show(interactionIconGroup);
         }
     }
 
@@ -35,8 +35,8 @@ public class InteractionDetector : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
         {
             interactableInRange = null;
-            interactionIcon.SetActive(false);
-            // interactionIcon.Hide(interactionIconGroup);
+            // interactionIcon.SetActive(false);
+            CanvasGroupDisplayer.Hide(interactionIconGroup);
         }
     }
     
