@@ -9,4 +9,14 @@ public class StartScreen : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     
+    public void OnGameButtonClicked()
+    {
+        SceneManager.LoadScene(2);
+    }
+    
+    public void OnQuitButtonClicked()
+    {
+        Application.Quit();
+    }
+    
 }

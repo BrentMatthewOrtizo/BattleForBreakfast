@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58d78726b5dba44ebb03c0917bbaded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3.5
 --- !u!50 &284303334
 Rigidbody2D:
   serializedVersion: 5
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   Damping: 0
   SlowingDistance: 0
   OversizeWindow:
-    Enabled: 0
+    Enabled: 1
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
