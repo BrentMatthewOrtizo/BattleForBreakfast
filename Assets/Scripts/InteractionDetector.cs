@@ -3,15 +3,14 @@ using UnityEngine.InputSystem;
 
 public class InteractionDetector : MonoBehaviour
 {
-
-    public CanvasGroup interactionIconGroup;
+    
     public GameObject interactionIcon;
     
     private IInteractable interactableInRange = null;
-    void Awake()
+    
+    void Start()
     {
-        // interactionIcon.SetActive(false);
-        CanvasGroupDisplayer.Hide(interactionIconGroup);
+        interactionIcon.SetActive(false);
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -25,8 +24,7 @@ public class InteractionDetector : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
         {
             interactableInRange = interactable;
-            // interactionIcon.SetActive(true);
-            CanvasGroupDisplayer.Show(interactionIconGroup);
+            interactionIcon.SetActive(true);
         }
     }
 
@@ -35,8 +33,7 @@ public class InteractionDetector : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
         {
             interactableInRange = null;
-            // interactionIcon.SetActive(false);
-            CanvasGroupDisplayer.Hide(interactionIconGroup);
+            interactionIcon.SetActive(false);
         }
     }
     

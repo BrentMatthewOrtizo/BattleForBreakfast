@@ -9,14 +9,13 @@ public class NPC : MonoBehaviour, IInteractable
     public GameObject dialoguePanel;
     public Text dialogueText, nameText;
     public Image portraitImage;
-    public CanvasGroup panelGroup;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
-    void Awake()
+    void Start()
     {
-        CanvasGroupDisplayer.Hide(panelGroup);
+        dialoguePanel.SetActive(false);
     }
     
     public void Interact()
@@ -47,8 +46,7 @@ public class NPC : MonoBehaviour, IInteractable
         nameText.text = dialogueData.npcName;
         portraitImage.sprite = dialogueData.npcPortrait;
 
-        // dialoguePanel.SetActive(true);
-        CanvasGroupDisplayer.Show(panelGroup);
+        dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
     }
 
@@ -95,8 +93,7 @@ public class NPC : MonoBehaviour, IInteractable
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.text = "";
-        // dialoguePanel.SetActive(false);
-        CanvasGroupDisplayer.Hide(panelGroup);
+        dialoguePanel.SetActive(false);
     }
     
 }

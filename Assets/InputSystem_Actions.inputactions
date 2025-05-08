@@ -80,11 +80,11 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "dbc6a450-252c-4ff9-aee0-d4b056aa6e9b",
+                    "id": "a795f5d3-7129-474e-8636-bd76891a0269",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -453,11 +453,22 @@
                 },
                 {
                     "name": "",
-                    "id": "5d0cd863-239e-487c-8317-6240d99623e7",
+                    "id": "bbd1b0bc-8f49-4109-94f9-20eef0c772a6",
                     "path": "<Keyboard>/e",
-                    "interactions": "Tap(duration=1.401298E-45)",
+                    "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3d2c988-282c-4f10-bd59-632a1b598c05",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false

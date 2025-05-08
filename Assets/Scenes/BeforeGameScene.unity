@@ -12863,14 +12863,13 @@ GameObject:
   m_Component:
   - component: {fileID: 129411615}
   - component: {fileID: 129411616}
-  - component: {fileID: 129411617}
   m_Layer: 0
   m_Name: InteractionIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &129411615
 Transform:
   m_ObjectHideFlags: 0
@@ -12941,18 +12940,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!225 &129411617
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129411614}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &134556996
 GameObject:
   m_ObjectHideFlags: 0
@@ -13595,22 +13582,6 @@ MonoBehaviour:
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 765610519}
-        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
-        m_MethodName: OnInteract
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
-    m_ActionName: 'Player/Interact[/Keyboard/e]'
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
@@ -13670,6 +13641,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765610519}
+        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a795f5d3-7129-474e-8636-bd76891a0269
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -14273,7 +14260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809176f090fde4340ae2cb0e0fb933b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionIconGroup: {fileID: 129411617}
   interactionIcon: {fileID: 129411614}
 --- !u!1 &783007466
 GameObject:
@@ -15998,7 +15984,6 @@ MonoBehaviour:
   dialogueText: {fileID: 163955818}
   nameText: {fileID: 701037513}
   portraitImage: {fileID: 1166901289}
-  panelGroup: {fileID: 2105308389}
 --- !u!1 &1714581701
 GameObject:
   m_ObjectHideFlags: 0
@@ -18514,14 +18499,13 @@ GameObject:
   - component: {fileID: 2105308386}
   - component: {fileID: 2105308388}
   - component: {fileID: 2105308387}
-  - component: {fileID: 2105308389}
   m_Layer: 5
   m_Name: Panel-Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2105308386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18583,18 +18567,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105308385}
   m_CullTransparentMesh: 1
---- !u!225 &2105308389
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105308385}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
