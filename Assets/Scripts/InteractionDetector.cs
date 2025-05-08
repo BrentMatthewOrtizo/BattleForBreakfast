@@ -15,21 +15,31 @@ public class InteractionDetector : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        // Check if the action was performed AND if there is an interactable object in range
+        if (context.performed && interactableInRange != null)
+        {
             interactableInRange.Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
+        // Check if the colliding object has an IInteractable component
+        if (collision.TryGetComponent(out IInteractable interactable))
         {
-            interactableInRange = interactable;
-            interactionIcon.SetActive(true);
+            // Further check if this interactable object CanInteract
+            // This prevents trying to interact with an NPC that is already in dialogue, for example.
+            if (interactable.CanInteract())
+            {
+                interactableInRange = interactable;
+                interactionIcon.SetActive(true);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Check if the exiting object is the one currently in range
         if (collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
         {
             interactableInRange = null;
