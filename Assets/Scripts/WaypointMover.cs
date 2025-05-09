@@ -29,7 +29,7 @@ public class WaypointMover : MonoBehaviour
     {
         if (isWaiting)
         {
-            animator.SetBool("IsWalking", false);
+            animator.SetBool("isWalking", false);
             return;
         }
         
