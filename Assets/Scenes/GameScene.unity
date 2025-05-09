@@ -1953,7 +1953,7 @@ GameObject:
   - component: {fileID: 1917510796}
   - component: {fileID: 1917510795}
   m_Layer: 0
-  m_Name: Cinecam-StoreA
+  m_Name: Cinecam-Store
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
