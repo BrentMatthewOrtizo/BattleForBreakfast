@@ -12,9 +12,11 @@ public class WaypointMover : MonoBehaviour
     private Transform[] waypoints;
     private int currentWaypointIndex;
     private bool isWaiting;
+    private Animator animator;
     
     void Start()
     {
+        animator = GetComponent<Animator>();
         waypoints = new Transform[waypointParent.childCount];
 
         for (int i = 0; i < waypointParent.childCount; i++)
@@ -26,7 +28,10 @@ public class WaypointMover : MonoBehaviour
     void Update()
     {
         if (isWaiting)
+        {
+            animator.SetBool("IsWalking", false);
             return;
+        }
         
         MoveToWaypoint();
     }
@@ -34,8 +39,12 @@ public class WaypointMover : MonoBehaviour
     void MoveToWaypoint()
     {
         Transform target = waypoints[currentWaypointIndex];
+        Vector2 direction = (target.position - transform.position).normalized;
         
         transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        animator.SetFloat("InputX", direction.x);
+        animator.SetFloat("InputY", direction.y);
+        animator.SetBool("isWalking", direction.magnitude > 0f);
 
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
@@ -46,6 +55,7 @@ public class WaypointMover : MonoBehaviour
     IEnumerator WaitAtWaypoint()
     {
         isWaiting = true;
+        animator.SetBool("isWalking", false);
         yield return new WaitForSeconds(waitTime);
         
         // If looping is enabled: increment currentWaypointIndex and wrap around if needed

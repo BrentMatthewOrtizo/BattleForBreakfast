@@ -13465,11 +13465,9 @@ GameObject:
   - component: {fileID: 554605281}
   - component: {fileID: 554605280}
   - component: {fileID: 554605279}
-  - component: {fileID: 554605285}
   - component: {fileID: 554605278}
   - component: {fileID: 554605284}
-  - component: {fileID: 554605287}
-  - component: {fileID: 554605286}
+  - component: {fileID: 554605285}
   m_Layer: 0
   m_Name: Player-BeforeGame
   m_TagString: Player
@@ -13810,36 +13808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7ff318711ab495a99b3e901e32d5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &554605286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554605277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
-  m_SpriteKey: 0
-  m_SpriteHash: 590413984
---- !u!114 &554605287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554605277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: b369de667a6ac87409cead1cb6d92437, type: 3}
 --- !u!1 &607715851
 GameObject:
   m_ObjectHideFlags: 0
@@ -16432,6 +16400,9 @@ GameObject:
   - component: {fileID: 1653492794}
   - component: {fileID: 1653492797}
   - component: {fileID: 1653492798}
+  - component: {fileID: 1653492801}
+  - component: {fileID: 1653492800}
+  - component: {fileID: 1653492799}
   m_Layer: 0
   m_Name: NPC-OldMan
   m_TagString: Untagged
@@ -16529,7 +16500,7 @@ SpriteRenderer:
   m_SortingLayerID: 1261973185
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4723107735738678597, guid: 8742bb9e6320425478370293991aa37d, type: 3}
+  m_Sprite: {fileID: -982904232830982447, guid: 3437ca73100e8a44ca32abd211b6f102, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16588,6 +16559,58 @@ MonoBehaviour:
   moveSpeed: 4
   waitTime: 0.25
   loopWaypoints: 1
+--- !u!114 &1653492799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653492793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 1.8625731e-11
+  m_labelHash: 3.941804e-21
+  m_SpriteKey: 0
+  m_SpriteHash: 171575919
+--- !u!114 &1653492800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653492793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 360f4fe6f497c4c41863d55cc95f69a7, type: 3}
+--- !u!95 &1653492801
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653492793}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1706922995
 GameObject:
   m_ObjectHideFlags: 0
@@ -16601,6 +16624,9 @@ GameObject:
   - component: {fileID: 1706922998}
   - component: {fileID: 1706922997}
   - component: {fileID: 1706923000}
+  - component: {fileID: 1706923002}
+  - component: {fileID: 1706923001}
+  - component: {fileID: 1706923003}
   m_Layer: 0
   m_Name: NPC-Girl
   m_TagString: Untagged
@@ -16757,6 +16783,58 @@ MonoBehaviour:
   moveSpeed: 2
   waitTime: 1
   loopWaypoints: 1
+--- !u!114 &1706923001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706922995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
+--- !u!114 &1706923002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706922995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 42e904aeb16773d43a604e61c77587c8, type: 3}
+--- !u!95 &1706923003
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706922995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1714581701
 GameObject:
   m_ObjectHideFlags: 0
