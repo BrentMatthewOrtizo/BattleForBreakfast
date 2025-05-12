@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
 
-        if (animator == null) Debug.LogError("PlayerMovement: Animator component not found!");
-        if (mainCamera == null) Debug.LogError("PlayerMovement: Main Camera not found! Ensure it's tagged 'MainCamera'.");
+        if (SceneManager.GetActiveScene().name == "BeforeGameScene")
+        {
+            
+        }
     }
 
     void Update()
@@ -31,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
             // Aim towards mouse when idle (no keyboard/gamepad input)
             if (moveInput == Vector2.zero && !animator.GetBool("isWalking"))
             {
-                UpdateAimDirectionTowardsMouse();
+                if (SceneManager.GetActiveScene().name == "GameScene")
+                {
+                    UpdateAimDirectionTowardsMouse();
+                }
             }
         }
         else

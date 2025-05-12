@@ -5,7 +5,7 @@ public class DoorToStore : MonoBehaviour, IInteractable
 {
     public void Interact()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
     public bool CanInteract()

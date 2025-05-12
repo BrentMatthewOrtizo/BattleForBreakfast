@@ -9,6 +9,7 @@ public class NPC : MonoBehaviour, IInteractable
     public GameObject dialoguePanel;
     public Text dialogueText, nameText;
     public Image portraitImage;
+    public PlayerMovement playerMovement;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
@@ -42,6 +43,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         isDialogueActive = true;
         dialogueIndex = 0;
+        playerMovement.SetMovementEnabled(false);
         
         nameText.text = dialogueData.npcName;
         portraitImage.sprite = dialogueData.npcPortrait;
@@ -90,6 +92,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void EndDialogue()
     {
+        playerMovement.SetMovementEnabled(true);
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.text = "";
