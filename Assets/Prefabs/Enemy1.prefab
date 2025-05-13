@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5445685000314623047}
   - component: {fileID: 2393334057210510894}
   - component: {fileID: 6342067561527932083}
+  - component: {fileID: -8990626562468188010}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 1261973185
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4035959289877228764, guid: 58d6fd0838de4ce419c7a31c1c648dc5, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 942b1144d522f784f9096651c509cd0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,10 +192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 9.932601e-39
+  m_labelHash: 3.8248278e-23
   m_SpriteKey: 0
-  m_SpriteHash: 1027422969
+  m_SpriteHash: 163368403
 --- !u!95 &6342067561527932083
 Animator:
   serializedVersion: 7
@@ -217,3 +218,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8990626562468188010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384145598406506897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b95467032821429ef712020170dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 0}
+  spawner: {fileID: 0}
