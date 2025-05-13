@@ -34,10 +34,7 @@ public class PlayerMovement : MonoBehaviour
             // Aim towards mouse when idle (no keyboard/gamepad input)
             if (moveInput == Vector2.zero && !animator.GetBool("isWalking"))
             {
-                if (SceneManager.GetActiveScene().name == "GameScene")
-                {
-                    UpdateAimDirectionTowardsMouse();
-                }
+                UpdateAimDirectionTowardsMouse();
             }
         }
         else
