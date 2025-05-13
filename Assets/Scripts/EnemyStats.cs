@@ -1,7 +1,5 @@
 using UnityEngine;
 
-namespace Enemies
-{
     [CreateAssetMenu(fileName = "NewEnemyStats", menuName = "MyGame/Enemy Stats")]
     public class EnemyStats : ScriptableObject
     {
@@ -21,4 +19,3 @@ namespace Enemies
 
         // Add any other stats your enemies might need (e.g., armor, scoreValue, specific sounds)
     }
-}

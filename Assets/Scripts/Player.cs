@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Player
-{
     public class Player : MonoBehaviour, IInteractable
     {
 
@@ -113,4 +111,3 @@ namespace Player
         }
     
     }
-}
