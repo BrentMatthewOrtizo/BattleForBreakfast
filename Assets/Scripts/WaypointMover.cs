@@ -9,9 +9,9 @@ public class WaypointMover : MonoBehaviour
     public float waitTime = 2f;
     public bool loopWaypoints = true;
     
+    private bool isWaiting;
     private Transform[] waypoints;
     private int currentWaypointIndex;
-    private bool isWaiting;
     private Animator animator;
     
     void Start()

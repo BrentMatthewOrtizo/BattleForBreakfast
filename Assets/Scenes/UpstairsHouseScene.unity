@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 247905033}
   - component: {fileID: 247905032}
   m_Layer: 0
-  m_Name: Grid-DuringGame
+  m_Name: Grid-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 377188614}
   - component: {fileID: 377188613}
   m_Layer: 0
-  m_Name: WalkBehind-DuringGame
+  m_Name: WalkBehind-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 650743795}
   - component: {fileID: 650743794}
   m_Layer: 0
-  m_Name: Decor-DuringGame
+  m_Name: Decor-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1686,10 +1686,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 6.277981, y: 2.7978837}
-      - {x: -7.7385693, y: 2.8059177}
-      - {x: -7.741164, y: -5.2256713}
-      - {x: 6.2733126, y: -5.2482133}
+    - - {x: 10.2852955, y: 5.6619706}
+      - {x: -11.743348, y: 5.5448184}
+      - {x: -11.753131, y: -7.717954}
+      - {x: 10.265017, y: -7.8114147}
   m_UseDelaunayMesh: 0
 --- !u!1 &777445333
 GameObject:
@@ -1862,7 +1862,7 @@ Transform:
   m_GameObject: {fileID: 910273653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0024962425, y: -0.00909996, z: -10}
+  m_LocalPosition: {x: -0.3469653, y: 0.8132999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1956,7 +1956,7 @@ GameObject:
   - component: {fileID: 937785833}
   - component: {fileID: 937785832}
   m_Layer: 0
-  m_Name: Ground-DuringGame
+  m_Name: Ground-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5839,7 +5839,7 @@ GameObject:
   - component: {fileID: 1278151553}
   - component: {fileID: 1278151560}
   m_Layer: 0
-  m_Name: Player-BeforeGame
+  m_Name: Player-UpstairsHouse
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6184,7 +6184,7 @@ GameObject:
   - component: {fileID: 1572457393}
   - component: {fileID: 1572457392}
   m_Layer: 0
-  m_Name: WalkInFront-DuringGame
+  m_Name: WalkInFront-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6851,7 +6851,7 @@ GameObject:
   - component: {fileID: 1713130220}
   - component: {fileID: 1713130219}
   m_Layer: 0
-  m_Name: Collision-DuringGame
+  m_Name: Collision-UpstairsHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
