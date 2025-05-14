@@ -127,10 +127,10 @@ TextureImporter:
         serializedVersion: 2
         x: 75
         y: 9
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Sword_DownLeft_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 143
         y: 9
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5000008, y: 1.0000002}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: Sword_DownLeft_2
       rect:
         serializedVersion: 2
-        x: 228
+        x: 210
         y: 9
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Sword_DownLeft_3
       rect:
         serializedVersion: 2
-        x: 292
+        x: 274
         y: 9
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
