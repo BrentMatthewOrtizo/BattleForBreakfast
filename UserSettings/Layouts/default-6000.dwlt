@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.9318144, y: 1.1927509, z: 0.23508796}
+    m_Target: {x: -10.2282095, y: 6.132797, z: 0.29750413}
     speed: 2
     m_Value: {x: 1.9318144, y: 1.1927509, z: 0.23508796}
   m_RenderMode: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.334649
+    m_Target: 2.0930471
     speed: 2
     m_Value: 8.334649
   m_Ortho:
@@ -1174,7 +1174,6 @@ MonoBehaviour:
     - {fileID: -3320809412957637254, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
     - {fileID: -8370957667974928189, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
     - {fileID: -4543816189575649308, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
-    - {fileID: -8371049297449578555, guid: 0495b596152904bbfbd6e35f85c2ca7a, type: 2}
     - {fileID: -4869026801036815795, guid: f85dff4dabe803e4da8caf8bcdd34f1a, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.98717946
@@ -1265,22 +1264,6 @@ MonoBehaviour:
       e11: 1
       e12: 0
       e13: -66.6667
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.54035085
-      e01: 0
-      e02: 0
-      e03: -12.017548
-      e10: 0
-      e11: 0.54035085
-      e12: 0
-      e13: 115
       e20: 0
       e21: 0
       e22: 1
@@ -1387,7 +1370,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 306.6667}
     m_SelectedIDs: 8af00000
     m_LastClickedID: 61578
-    m_ExpandedIDs: 000000007cec00007eec000080ec000082ec000084ec000086ec000088ec0000
+    m_ExpandedIDs: 00000000aced0000aeed0000b0ed0000b2ed0000b4ed0000b6ed0000b8ed0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1416,7 +1399,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007cec00007eec000080ec000082ec000084ec000086ec000088ec0000
+    m_ExpandedIDs: 00000000aced0000aeed0000b0ed0000b2ed0000b4ed0000b6ed0000b8ed0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
