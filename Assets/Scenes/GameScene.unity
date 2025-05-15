@@ -12345,7 +12345,7 @@ MonoBehaviour:
   - {fileID: 384145598406506897, guid: f29a839d4d9b0a14198f19f0e40fb4e4, type: 3}
   - {fileID: 384145598406506897, guid: 641067fb5cc13244c9c3a4a112d9282b, type: 3}
   - {fileID: 384145598406506897, guid: 70e90f4683207b44c85e17fb8ea02f69, type: 3}
-  maxEnemies: 10
+  maxEnemies: 2
   spawnInterval: 5
 --- !u!1 &326728445
 GameObject:
