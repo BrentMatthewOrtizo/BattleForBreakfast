@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
 
         UpdateTargetDirection();
 
-        if (enemyAwareness.awareOfPlayer)
+        if (enemyAwareness.awareOfPlayer && enemyAwareness.hasLineOfSight)
         {
             isWandering = false;
             SetVelocity();
