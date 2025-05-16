@@ -1,14 +1,14 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class StairToBasement : MonoBehaviour, IInteractable
+public class StairToGround : MonoBehaviour, IInteractable
 {
 
     public GameObject player;
     public PolygonCollider2D mapBoundary;
     public CinemachineConfiner2D confiner;
     
-    private Vector2 teleportLocation = new Vector2(56f, 7.06f);
+    private Vector2 teleportLocation = new Vector2(28f, 7.32f);
 
     public void Awake()
     {
