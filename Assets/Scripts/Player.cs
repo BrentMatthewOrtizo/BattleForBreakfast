@@ -109,4 +109,5 @@ using UnityEngine.UI;
             dialogueText.text = "";
             dialoguePanel.SetActive(false);
         }
+        // test comment
     }
