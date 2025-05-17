@@ -3,34 +3,40 @@ using UnityEngine;
 public class EnemyAttackDamage : MonoBehaviour
 {
     [Tooltip("How much damage this specific enemy attack/hitbox deals.")]
-    public int damageAmount = 5; // Default, you can change this per enemy hitbox in the Inspector
-
+    public int damageAmount = 5;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Log every collision this trigger detects for debugging
-        // Debug.Log(transform.root.name + "'s hitbox (" + gameObject.name + ") collided with: " + other.gameObject.name + " with tag: " + other.tag);
+        Debug.Log($"[EnemyAttackDamage] Hitbox '{gameObject.name}' on '{transform.root.name}' triggered with '{other.gameObject.name}' (Tag: '{other.tag}')");
 
         // Check if the object we collided with is tagged "Player"
         if (other.CompareTag("Player"))
         {
-            // Try to get the IDamageable component from the Player object
+            Debug.Log($"[EnemyAttackDamage] '{gameObject.name}' hit something tagged 'Player': '{other.gameObject.name}'");
+            
             IDamageable playerDamageable = other.GetComponent<IDamageable>();
-
+            
             if (playerDamageable != null)
             {
-                // If the Player has an IDamageable component, tell it to take damage
+                Debug.Log($"[EnemyAttackDamage] Found IDamageable component on '{other.gameObject.name}'. Attempting to deal {damageAmount} damage.");
                 playerDamageable.TakeDamage(damageAmount);
-                Debug.Log(transform.root.name + " (enemy) dealt " + damageAmount + " damage to " + other.name + " (Player)");
-
-                // Optional: Deactivate this specific hitbox after it hits the player once per activation.
-                // This prevents a single enemy swing from hitting the player multiple times if they stay overlapped.
-                // The hitbox will be re-enabled by EnemyMovement.cs for the next attack.
-                // gameObject.SetActive(false);
+                Debug.Log($"[EnemyAttackDamage] {transform.root.name} (enemy) successfully dealt {damageAmount} damage to {other.name} (Player). Player should take damage now.");
+                
             }
             else
             {
-                Debug.LogWarning("EnemyAttackDamage: " + other.name + " (Player) was hit but has no IDamageable component (e.g., PlayerHealth script not attached or not implementing IDamageable).");
+                Debug.LogWarning($"[EnemyAttackDamage] Hit '{other.name}' (Player) but it has NO IDamageable component. Check if PlayerHealth.cs is on '{other.gameObject.name}' and implements IDamageable.");
             }
         }
+    }
+    
+    void OnEnable()
+    {
+        Debug.Log($"[EnemyAttackDamage] Hitbox '{gameObject.name}' on enemy '{transform.root.name}' has been ENABLED.");
+    }
+
+    void OnDisable()
+    {
+        Debug.Log($"[EnemyAttackDamage] Hitbox '{gameObject.name}' on enemy '{transform.root.name}' has been DISABLED.");
     }
 }
