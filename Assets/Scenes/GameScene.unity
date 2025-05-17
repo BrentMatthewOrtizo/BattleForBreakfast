@@ -44425,6 +44425,7 @@ GameObject:
   - component: {fileID: 865887054}
   - component: {fileID: 865887053}
   - component: {fileID: 865887052}
+  - component: {fileID: 865887055}
   m_Layer: 0
   m_Name: SlashHitboxDR
   m_TagString: Untagged
@@ -44459,6 +44460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afaf21b7dcb78c4394e56ce8ad64003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!60 &865887053
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -44580,6 +44582,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &865887055
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865887050}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &933044926
 GameObject:
   m_ObjectHideFlags: 0
@@ -44592,6 +44621,7 @@ GameObject:
   - component: {fileID: 933044930}
   - component: {fileID: 933044929}
   - component: {fileID: 933044928}
+  - component: {fileID: 933044931}
   m_Layer: 0
   m_Name: SlashHitboxUL
   m_TagString: Untagged
@@ -44626,6 +44656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afaf21b7dcb78c4394e56ce8ad64003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!60 &933044929
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -44749,6 +44780,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &933044931
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933044926}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &991836133
 GameObject:
   m_ObjectHideFlags: 0
@@ -45371,6 +45429,7 @@ GameObject:
   - component: {fileID: 1411136316}
   - component: {fileID: 1411136315}
   - component: {fileID: 1411136314}
+  - component: {fileID: 1411136317}
   m_Layer: 0
   m_Name: SlashHitboxDL
   m_TagString: Untagged
@@ -45405,6 +45464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afaf21b7dcb78c4394e56ce8ad64003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!60 &1411136315
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -45524,6 +45584,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1411136317
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411136312}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1484290400
 GameObject:
   m_ObjectHideFlags: 0
@@ -45620,6 +45707,7 @@ GameObject:
   - component: {fileID: 1538850139}
   - component: {fileID: 1538850138}
   - component: {fileID: 1538850137}
+  - component: {fileID: 1538850140}
   m_Layer: 0
   m_Name: SlashHitboxUR
   m_TagString: Untagged
@@ -45654,6 +45742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afaf21b7dcb78c4394e56ce8ad64003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!212 &1538850138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45775,6 +45864,33 @@ PolygonCollider2D:
       - {x: 0.8468299, y: 0.034183502}
       - {x: 0.82263184, y: 0.13437599}
   m_UseDelaunayMesh: 0
+--- !u!50 &1538850140
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538850135}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1579281019
 GameObject:
   m_ObjectHideFlags: 0
@@ -55619,7 +55735,7 @@ Transform:
   m_GameObject: {fileID: 1981245027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.93, y: 0.08, z: -0.06360422}
+  m_LocalPosition: {x: 7.16, y: -1.01, z: -0.06360422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
