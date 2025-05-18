@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Cereal : MonoBehaviour, IInteractable
 {
+    
     public GameObject cerealSprite;
     public Image      cerealPanelImage;
     public GameObject doorInteraction;
@@ -30,4 +31,5 @@ public class Cereal : MonoBehaviour, IInteractable
         c.a = a;
         cerealPanelImage.color = c;
     }
+    
 }
