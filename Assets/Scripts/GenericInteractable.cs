@@ -8,14 +8,16 @@ public class GenericInteractable : MonoBehaviour, IInteractable
     [Header("What this does when you press E:")]
     public Mode mode = Mode.Nothing;
 
-    [Header("→ Scene Loading (LoadScene only)")]
+    [Header("→ Scene Loading")]
     public int sceneBuildIndex;
+    [Tooltip("Optional: which SpawnPoint.spawnID to use in the next scene")]
+    public string spawnPointID;
 
     [Header("→ Teleporting (Teleport only)")]
     public Transform teleportDestination;
     public PolygonCollider2D newMapBoundary;
 
-    // cached at runtime, but only if we actually teleport
+    // Cached at runtime, but only if we actually teleport
     Transform              _player;
     CinemachineConfiner2D _confiner;
     bool                  _didCacheTeleportRefs = false;
@@ -40,6 +42,8 @@ public class GenericInteractable : MonoBehaviour, IInteractable
         switch (mode)
         {
             case Mode.LoadScene:
+                if (!string.IsNullOrEmpty(spawnPointID))
+                    SpawnManager.nextSpawnPointID = spawnPointID;
                 SceneManager.LoadScene(sceneBuildIndex);
                 break;
 

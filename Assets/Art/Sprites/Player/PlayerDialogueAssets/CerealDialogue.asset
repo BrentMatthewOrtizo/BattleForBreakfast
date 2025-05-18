@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6db06befaed4d448832aff4bc08a64c, type: 3}
-  m_Name: UpstairsDialogue
+  m_Name: CerealDialogue
   m_EditorClassIdentifier: 
   speakerName: Player
   speakerPortrait: {fileID: 21300000, guid: 7b38de3f46ac0f548b4e9d1b681e88af, type: 2}
   dialogueLines:
-  - Rise and shine!
-  - Wow, my stomach is growling. I need to eat breakfast.
-  - What should I eat?
-  - Oh I know!
-  - CEREAL!
-  - Let me take my ladder downstairs to get some.
-  autoProgressLines: 010101010100
+  - Well that was an experience.
+  - Who knew Black Friday could be so scary?
+  - I literally just murdered some people.
+  - Oh well, at least I got my cereal!
+  - And it is AWESOME!
+  autoProgressLines: 0101010100
   typingSpeed: 0.05
-  autoProgressDelay: 0.7
+  autoProgressDelay: 2
