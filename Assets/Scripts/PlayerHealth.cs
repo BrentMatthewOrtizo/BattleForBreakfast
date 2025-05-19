@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,18 +7,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public PlayerMovement playerMovement;
+    public GameObject diePanel;
 
     // public GameObject gameOverScreen; later for game over screen
 
     void Start()
     {
+        diePanel.SetActive(false);
         currentHealth = maxHealth;
         if (healthBar != null)
         {
             healthBar.SetMaxHealth(maxHealth);
         }
-        // for testing of hp bar func
-        if (Input.GetKeyDown(KeyCode.Space)) { TakeDamage(20); }
     }
     
     // HP add-on for testing
@@ -42,10 +44,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     void Die()
     {
         //TO DO 
+        diePanel.SetActive(true);
         Debug.Log(gameObject.name + " has died!");
-        // - Play death animation
-        // - Disable player controls (PlayerMovement, PlayerAttack)
-        // - Show game over screen
+        playerMovement.SetMovementEnabled(false);
+        StartCoroutine(GoToGameOverScene());
+    }
+
+    private IEnumerator GoToGameOverScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(6);
     }
     
 }
