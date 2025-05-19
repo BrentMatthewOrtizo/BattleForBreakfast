@@ -5762,7 +5762,7 @@ GameObject:
   - component: {fileID: 1278151555}
   - component: {fileID: 1278151554}
   - component: {fileID: 1278151553}
-  - component: {fileID: 1278151561}
+  - component: {fileID: 1278151560}
   m_Layer: 0
   m_Name: Player-UpstairsHouse
   m_TagString: Player
@@ -6079,7 +6079,7 @@ Transform:
   - {fileID: 777445335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1278151561
+--- !u!114 &1278151560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6099,7 +6099,7 @@ MonoBehaviour:
   movementScripts:
   - {fileID: 1278151557}
   startOnAwake: 1
-  startDelay: 1.5
+  startDelay: 1
 --- !u!1 &1572457390
 GameObject:
   m_ObjectHideFlags: 0
@@ -8677,7 +8677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1278151561}
+      - m_Target: {fileID: 1278151560}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: EndDialogue
         m_Mode: 1

@@ -20,4 +20,4 @@ MonoBehaviour:
   - I gotta go to the store and buy some!
   autoProgressLines: 010100
   typingSpeed: 0.05
-  autoProgressDelay: 2
+  autoProgressDelay: 0.7

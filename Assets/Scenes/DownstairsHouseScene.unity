@@ -463,8 +463,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1503138702}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+      - m_Target: {fileID: 1503138701}
+        m_TargetAssemblyTypeName: MysteryDialogueTrigger, Assembly-CSharp
         m_MethodName: EndDialogue
         m_Mode: 1
         m_Arguments:
@@ -5158,8 +5158,7 @@ MonoBehaviour:
   nameText: {fileID: 1088718164}
   bodyText: {fileID: 883372697}
   portraitImage: {fileID: 1355495699}
-  movementScripts:
-  - {fileID: 1942098399}
+  movementScripts: []
   startOnAwake: 0
   startDelay: 0
 --- !u!1 &883372695
@@ -6448,7 +6447,6 @@ GameObject:
   - component: {fileID: 1503138700}
   - component: {fileID: 1503138699}
   - component: {fileID: 1503138701}
-  - component: {fileID: 1503138702}
   m_Layer: 0
   m_Name: Sprite-Cereal
   m_TagString: Untagged
@@ -6581,21 +6579,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503138697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34082336dc6fb1498f9fbfe861f9b6e, type: 3}
+  m_Script: {fileID: 11500000, guid: f64ec5bc2f3faf448b573d471e885f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1503138702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503138697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea81615fe6e07574d8bad7febc3d4535, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 1503138700}
   data: {fileID: 11400000, guid: 824be724eb644fb48bedaa233320ec18, type: 2}
   dialoguePanel: {fileID: 2122102536}
   nameText: {fileID: 1088718164}

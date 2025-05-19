@@ -19,4 +19,4 @@ MonoBehaviour:
   - Cereal? Better watch out, it's black friday.
   autoProgressLines: 0100
   typingSpeed: 0.05
-  autoProgressDelay: 2
+  autoProgressDelay: 1

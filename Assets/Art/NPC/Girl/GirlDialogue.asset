@@ -19,4 +19,4 @@ MonoBehaviour:
   - No cereal?! But breakfast is the most important meal of the day!
   autoProgressLines: 0100
   typingSpeed: 0.05
-  autoProgressDelay: 2
+  autoProgressDelay: 1

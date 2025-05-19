@@ -22,4 +22,4 @@ MonoBehaviour:
   - And it is AWESOME!
   autoProgressLines: 0101010100
   typingSpeed: 0.05
-  autoProgressDelay: 2
+  autoProgressDelay: 0.7
