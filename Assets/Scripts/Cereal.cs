@@ -7,6 +7,7 @@ public class Cereal : MonoBehaviour, IInteractable
     public GameObject cerealSprite;
     public Image      cerealPanelImage;
     public GameObject doorInteraction;
+    public GameObject lighting;
 
     public void Start()
     {
@@ -21,6 +22,7 @@ public class Cereal : MonoBehaviour, IInteractable
         SetOpacity(1f);
         
         doorInteraction.SetActive(true);
+        lighting.SetActive(false);
     }
 
     public bool CanInteract() => !SpawnManager.hasCereal;
