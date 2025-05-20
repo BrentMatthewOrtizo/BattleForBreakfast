@@ -259,7 +259,7 @@ MonoBehaviour:
   enemySpeed: 3.5
   attackCooldown: 1
   attackHitboxDuration: 0.2
-  EnemyHitBoxU: {fileID: 0}
+  EnemyHitBoxU: {fileID: 7104040871295949776}
   hitboxD: {fileID: 4340656012943198211}
   hitboxL: {fileID: 655603494479677516}
   hitboxR: {fileID: 5475956974372998884}
