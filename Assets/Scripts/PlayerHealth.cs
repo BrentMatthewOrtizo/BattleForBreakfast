@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour, IDamageable 
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public static int maxHealth = 100;
+    public static int currentHealth;
     public HealthBar healthBar;
     public PlayerMovement playerMovement;
     public GameObject diePanel;
