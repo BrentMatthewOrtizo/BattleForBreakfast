@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4605685266003265038}
   m_Layer: 0
   m_Name: SpoiledMilk
-  m_TagString: Untagged
+  m_TagString: SpoiledMilk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1984444677
-  m_SortingLayer: 1
-  m_SortingOrder: 32767
+  m_SortingLayerID: 1261973185
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b63fd4363e5ac42a38a2cd5dbc91de22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -5,15 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 4f;
 
     private Rigidbody2D rigidBody;
     private Vector2 moveInput;
     private Animator animator;
     private Camera mainCamera;
+    public SlashHitbox slashHitbox;
 
     private bool canMove = true; // Controls if movement logic is active (e.g., restricted during attacks)
-
+    
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -95,4 +97,73 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("RedBull"))
+        {
+            ActivateSpeedBoost();
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("SpoiledMilk"))
+        {
+            ActivateSlowness();
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Monster"))
+        {
+            ActivateDamageBoost();
+            Destroy(other.gameObject);
+        }
+    }
+    
+    public void ActivateSpeedBoost()
+    {
+        StopCoroutine("SpeedBoostRoutine"); 
+        StartCoroutine(SpeedBoostRoutine());
+    }
+
+    private IEnumerator SpeedBoostRoutine()
+    {
+        float originalSpeed = moveSpeed;
+        moveSpeed = 8f;
+
+        yield return new WaitForSeconds(5f);
+
+        moveSpeed = originalSpeed;
+    }
+    
+    public void ActivateSlowness()
+    {
+        StopCoroutine("SlownessRoutine"); 
+        StartCoroutine(SlownessRoutine());
+    }
+
+    private IEnumerator SlownessRoutine()
+    {
+        float originalSpeed = moveSpeed;
+        moveSpeed = 2f;
+
+        yield return new WaitForSeconds(5f);
+
+        moveSpeed = originalSpeed;
+    }
+    
+    private IEnumerator DamageBoostRoutine()
+    {
+        int currentDamage = SlashHitbox.damageAmount;
+        SlashHitbox.damageAmount = 10;
+
+        yield return new WaitForSeconds(5f);
+
+        SlashHitbox.damageAmount = 5;
+    }
+    
+    public void ActivateDamageBoost()
+    {
+        StopCoroutine("DamageBoostRoutine");
+        StartCoroutine(DamageBoostRoutine());
+    }
+
+
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAttackDamage : MonoBehaviour
@@ -5,6 +6,7 @@ public class EnemyAttackDamage : MonoBehaviour
     [Tooltip("How much damage this specific enemy attack/hitbox deals.")]
     public int damageAmount = 5;
     
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log($"[EnemyAttackDamage] Hitbox '{gameObject.name}' on '{transform.root.name}' triggered with '{other.gameObject.name}' (Tag: '{other.tag}')");
@@ -28,6 +30,7 @@ public class EnemyAttackDamage : MonoBehaviour
                 Debug.LogWarning($"[EnemyAttackDamage] Hit '{other.name}' (Player) but it has NO IDamageable component. Check if PlayerHealth.cs is on '{other.gameObject.name}' and implements IDamageable.");
             }
         }
+
     }
     
     void OnEnable()

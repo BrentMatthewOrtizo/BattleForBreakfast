@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class SpawnZone : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+    public GameObject[] powerUpPrefabs;
     public int maxEnemies = 15;
     public float spawnInterval = 2f;
     
@@ -36,6 +37,7 @@ public class SpawnZone : MonoBehaviour
             if (spawnTimer <= 0f)
             {
                 SpawnEnemy();
+                SpawnPowerUp();
                 spawnTimer = spawnInterval;
             }
         }
@@ -50,6 +52,18 @@ public class SpawnZone : MonoBehaviour
         {
             GameObject newEnemy = Instantiate(prefab, spawnPos, Quaternion.identity);
             activeEnemies.Add(newEnemy);
+        }
+    }
+
+    private void SpawnPowerUp()
+    {
+        GameObject prefab = powerUpPrefabs[Random.Range(0, powerUpPrefabs.Length)];
+        Vector2 spawnPos = GetValidSpawnPosition();
+
+        if (spawnPos != Vector2.zero)
+        {
+            GameObject newPowerUp = Instantiate(prefab, spawnPos, Quaternion.identity);
+            activeEnemies.Add(newPowerUp);
         }
     }
 

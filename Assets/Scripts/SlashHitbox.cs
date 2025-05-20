@@ -1,13 +1,14 @@
+using System.Collections;
 using UnityEngine;
 
 public class SlashHitbox : MonoBehaviour
 {
-    public int damageAmount = 5; // Player's slash damage
+    public static int damageAmount = 5; // Player's slash damage
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         IDamageable damageableObject = other.GetComponent<IDamageable>();
-
+        
         if (damageableObject != null)
         {
             // Needed to prevent player from damaging themselves if hitbox accidentally overlaps player collider
@@ -22,4 +23,5 @@ public class SlashHitbox : MonoBehaviour
             
         }
     }
+    
 }
