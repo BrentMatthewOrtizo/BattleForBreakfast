@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SlashHitbox : MonoBehaviour
 {
-    public static int damageAmount = 5; // Player's slash damage
+    public static int damageAmount = 5;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,11 +16,8 @@ public class SlashHitbox : MonoBehaviour
             {
                 return;
             }
-
-            // Deal damage here
             damageableObject.TakeDamage(damageAmount);
             Debug.Log(transform.root.name + " dealt " + damageAmount + " damage to " + other.name);
-            
         }
     }
     

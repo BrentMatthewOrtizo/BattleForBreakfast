@@ -6,7 +6,7 @@ public class EnemyAwareness : MonoBehaviour
     public bool awareOfPlayer { get; private set; }
     public Vector2 directionToPlayer { get; private set; }
     public float awarenessDistance = 6.5f;
-    public LayerMask obstacleMask; // Assign tilemap/furniture layers
+    public LayerMask obstacleMask;
     public bool hasLineOfSight { get; private set; }
 
     private Transform playerTransform;

@@ -16,8 +16,7 @@ public class GenericInteractable : MonoBehaviour, IInteractable
     [Header("→ Teleporting (Teleport only)")]
     public Transform teleportDestination;
     public PolygonCollider2D newMapBoundary;
-
-    // Cached at runtime, but only if we actually teleport
+    
     Transform              _player;
     CinemachineConfiner2D _confiner;
     bool                  _didCacheTeleportRefs = false;

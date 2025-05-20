@@ -4,8 +4,7 @@ public class SpawnPoint : MonoBehaviour
 {
     [Tooltip("Unique ID used by SpawnManager to teleport here")]
     public string spawnID;
-
-    [Tooltip("Which PolygonCollider2D the Cinemachine should confine to at this spawn")]
+    
     public PolygonCollider2D cameraBoundary;
     
     void OnDrawGizmos()

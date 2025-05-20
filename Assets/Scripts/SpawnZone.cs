@@ -89,7 +89,7 @@ public class SpawnZone : MonoBehaviour
             attempts++;
         } while (attempts < 20);
 
-        return Vector2.zero; // fallback
+        return Vector2.zero;
     }
 
     private bool IsTileBlocked(Vector2 worldPosition)

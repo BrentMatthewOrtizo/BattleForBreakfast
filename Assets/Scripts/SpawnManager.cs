@@ -34,12 +34,10 @@ public class SpawnManager : MonoBehaviour
         {
             if (sp.spawnID == nextSpawnPointID)
             {
-                // 1) move player
                 var player = GameObject.FindGameObjectWithTag("Player");
                 if (player != null)
                     player.transform.position = sp.transform.position;
-
-                // 2) update the camera confiner
+                
                 if (_confiner != null && sp.cameraBoundary != null)
                     _confiner.BoundingShape2D = sp.cameraBoundary;
 

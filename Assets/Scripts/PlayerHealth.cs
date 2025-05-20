@@ -11,8 +11,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public GameObject diePanel;
     public GameObject bloodPrefab;
 
-    // public GameObject gameOverScreen; later for game over screen
-
     void Start()
     {
         diePanel.SetActive(false);
@@ -23,7 +21,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
     
-    // HP add-on for testing
     public void TakeDamage(int damageAmount)
     {
         if (currentHealth <= 0) return; // dead
@@ -37,7 +34,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         
         if (currentHealth <= 0)
         {
-            currentHealth = 0; // Clamp health at 0
+            currentHealth = 0; // Health stay at 0
             Die();
         }
     }
@@ -46,7 +43,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         diePanel.SetActive(true);
-        Debug.Log(gameObject.name + " has died!");
         playerMovement.SetMovementEnabled(false);
         StartCoroutine(GoToGameOverScene());
     }

@@ -3,14 +3,11 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour, IDamageable 
 {
     [Tooltip("Starting and maximum health for this enemy type.")]
-    public int maxHealth = 10; // Default val
+    public int maxHealth = 10;
     public int currentHealth;
     public GameObject bloodPrefab;
 
-    // TODO: SCORE implementation
-    // public int scoreValue = 10;
-
-    void Awake() // awake instead of start so that hp is set before 
+    void Awake()
     {
         currentHealth = maxHealth;
     }

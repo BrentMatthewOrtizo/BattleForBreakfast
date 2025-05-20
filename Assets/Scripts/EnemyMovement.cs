@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     public float attackHitboxDuration = 0.2f;
 
     [Header("Directional Attack Hitboxes (Assign all 8)")]
-    public GameObject EnemyHitBoxU; // North (ensure this matches the Inspector name if you changed it there)
+    public GameObject EnemyHitBoxU; // North
     public GameObject hitboxD;      // South
     public GameObject hitboxL;      // West
     public GameObject hitboxR;      // East
@@ -23,25 +23,19 @@ public class EnemyMovement : MonoBehaviour
     private Animator animator;
     private float attackTimer = 0f;
     private bool isTouchingPlayer = false;
-
-    // Wander variables
+    
     private bool isWandering = false;
     private Vector2 wanderDirection;
     private float wanderTimer = 0f;
-    private float wanderDuration = 2f; // How long to wander in one direction
-    private float wanderCooldown = 1f; // How long to wait before choosing a new wander direction
+    private float wanderDuration = 2f;
+    private float wanderCooldown = 1f;
     private float wanderSpeed = 2f;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null) Debug.LogError("EnemyMovement: Rigidbody2D not found on " + gameObject.name);
-
         enemyAwareness = GetComponent<EnemyAwareness>();
-        if (enemyAwareness == null) Debug.LogError("EnemyMovement: EnemyAwareness component not found on " + gameObject.name);
-
         animator = GetComponent<Animator>();
-        if (animator == null) Debug.LogError("EnemyMovement: Animator component not found on " + gameObject.name);
 
         DeactivateAllHitboxes();
     }
@@ -53,14 +47,13 @@ public class EnemyMovement : MonoBehaviour
             attackTimer -= Time.fixedDeltaTime;
         }
 
-        UpdateTargetDirection(); // Determine if player is primary target
+        UpdateTargetDirection();
 
         if (enemyAwareness != null && enemyAwareness.awareOfPlayer && enemyAwareness.hasLineOfSight)
         {
-            isWandering = false; // Stop wandering if player is sighted
+            isWandering = false;
             SetVelocityBasedOnTarget();
             TryAttack();
-            // ApplySeparation(); // Assuming this logic is for multiple enemies, ensure it's implemented if needed
         }
         else
         {
@@ -95,8 +88,8 @@ public class EnemyMovement : MonoBehaviour
             animator.SetBool("isWalking", true);
             animator.SetFloat("InputX", targetDirectionToPlayer.x);
             animator.SetFloat("InputY", targetDirectionToPlayer.y);
-            animator.SetFloat("LastInputX", targetDirectionToPlayer.x); // Store for attack direction
-            animator.SetFloat("LastInputY", targetDirectionToPlayer.y); // Store for attack direction
+            animator.SetFloat("LastInputX", targetDirectionToPlayer.x);
+            animator.SetFloat("LastInputY", targetDirectionToPlayer.y);
         }
     }
 
@@ -116,8 +109,8 @@ public class EnemyMovement : MonoBehaviour
                 wanderDirection = Random.insideUnitCircle.normalized;
                 animator.SetFloat("InputX", wanderDirection.x);
                 animator.SetFloat("InputY", wanderDirection.y);
-                animator.SetFloat("LastInputX", wanderDirection.x); // Store for idle facing or potential wander attack
-                animator.SetFloat("LastInputY", wanderDirection.y); // Store for idle facing
+                animator.SetFloat("LastInputX", wanderDirection.x);
+                animator.SetFloat("LastInputY", wanderDirection.y);
             }
         }
 
@@ -132,18 +125,12 @@ public class EnemyMovement : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
-
-    // Placeholder for separation logic if you have multiple enemies
-    // private void ApplySeparation() { /* ... your existing logic ... */ }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isTouchingPlayer = true;
-            // Optionally stop movement immediately on touch if desired
-            // rb.linearVelocity = Vector2.zero;
-            // if (animator != null) animator.SetBool("isWalking", false);
         }
     }
 
@@ -173,49 +160,38 @@ public class EnemyMovement : MonoBehaviour
             GameObject hitboxToActivate = GetPreciseHitboxFor8WayDirection(attackDirX, attackDirY);
             if (hitboxToActivate != null)
             {
-                // This log confirms activation is being attempted
-                Debug.Log($"[EnemyAttack] {gameObject.name} attempting to activate hitbox: {hitboxToActivate.name} (determined from {attackDirX:F2}, {attackDirY:F2})");
                 StartCoroutine(ActivateEnemyHitboxCoroutine(hitboxToActivate));
-            }
-            else
-            {
-                // This warning means GetPreciseHitboxFor8WayDirection returned null.
-                // The Debug.LogError inside GetPreciseHitboxFor8WayDirection should have already printed why.
-                Debug.LogWarning($"{gameObject.name} couldn't determine/activate an 8-way hitbox for attack dir: ({attackDirX:F2},{attackDirY:F2}). See preceding error from GetPreciseHitboxFor8WayDirection.");
             }
             attackTimer = attackCooldown;
         }
     }
-
-    // Determine which of the 8 directional hitboxes to use based on attack direction
+    
     private GameObject GetPreciseHitboxFor8WayDirection(float x, float y)
 {
     GameObject chosenHitbox = null;
-    string intendedDirectionName = "None_LogicPathNotTaken"; // Default if no path is chosen
+    string intendedDirectionName = "None_LogicPathNotTaken";
 
     if (Mathf.Approximately(x, 0f) && Mathf.Approximately(y, 0f))
     {
         intendedDirectionName = "hitboxR (default for zero input)";
-        chosenHitbox = hitboxR; // Make sure hitboxR is assigned if this is a valid fallback
+        chosenHitbox = hitboxR;
     }
     else
     {
         Vector2 dir = new Vector2(x, y).normalized;
         float normX = dir.x;
         float normY = dir.y;
-
-        // Cardinal directions
+        
         if (normY > 0.9239f) { chosenHitbox = EnemyHitBoxU; intendedDirectionName = "EnemyHitBoxU (North)"; }
         else if (normY < -0.9239f) { chosenHitbox = hitboxD; intendedDirectionName = "hitboxD (South)"; }
         else if (normX > 0.9239f) { chosenHitbox = hitboxR; intendedDirectionName = "hitboxR (East)"; }
         else if (normX < -0.9239f) { chosenHitbox = hitboxL; intendedDirectionName = "hitboxL (West)"; }
-        // Diagonal directions
-        else if (normY > 0) // Upper half
+        else if (normY > 0)
         {
             if (normX > 0) { chosenHitbox = hitboxUR; intendedDirectionName = "hitboxUR (North-East)"; }
             else { chosenHitbox = hitboxUL; intendedDirectionName = "hitboxUL (North-West)"; }
         }
-        else // Lower half (normY <= 0, and not purely cardinal if logic reached here)
+        else
         {
             if (normX > 0) { chosenHitbox = hitboxDR; intendedDirectionName = "hitboxDR (South-East)"; }
             else { chosenHitbox = hitboxDL; intendedDirectionName = "hitboxDL (South-West)"; }
@@ -224,13 +200,10 @@ public class EnemyMovement : MonoBehaviour
 
     if (chosenHitbox == null)
     {
-        // This log is CRITICAL: It tells you WHICH hitbox slot was likely unassigned.
         Debug.LogError($"[EnemyMovement] {gameObject.name}: Intended to use hitbox variable '{intendedDirectionName}' for attack dir ({x:F2},{y:F2}), BUT this variable is NULL (i.e., not assigned in the Inspector, or no logic path chose a hitbox).");
         return null;
     }
 
-    // This log confirms a non-null hitbox was chosen.
-    // Debug.Log($"[EnemyMovement] {gameObject.name} selected hitbox '{chosenHitbox.name}' (from variable '{intendedDirectionName}') for attack dir ({x:F2},{y:F2}).");
     return chosenHitbox;
     }
 
@@ -238,10 +211,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (hitboxToActivate != null)
         {
-            // Debug.Log(gameObject.name + " activating enemy hitbox: " + hitboxToActivate.name);
             hitboxToActivate.SetActive(true);
             yield return new WaitForSeconds(attackHitboxDuration);
-            if (hitboxToActivate != null) // Check if not destroyed in the meantime
+            if (hitboxToActivate != null)
             {
                 hitboxToActivate.SetActive(false);
             }
@@ -250,7 +222,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void DeactivateAllHitboxes()
     {
-        // Ensure all hitbox GameObjects are assigned in the Inspector
         if (EnemyHitBoxU != null) EnemyHitBoxU.SetActive(false);
         if (hitboxD != null) hitboxD.SetActive(false);
         if (hitboxL != null) hitboxL.SetActive(false);
