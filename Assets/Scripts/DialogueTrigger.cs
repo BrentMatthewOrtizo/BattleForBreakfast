@@ -73,8 +73,7 @@ public class DialogueTrigger : MonoBehaviour, IInteractable
         }
 
         isTyping = false;
-
-        // auto-advance?
+        
         if (currentLine < data.autoProgressLines.Length 
             && data.autoProgressLines[currentLine])
         {

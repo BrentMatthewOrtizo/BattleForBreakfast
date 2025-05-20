@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 12aef621d6a5a854dabea7dcfb5ec494
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8543457761855181083
+    second: TryAgainAgain_0
+  - first:
+      213: -2359781646782844
+    second: TryAgainAgain_1
+  - first:
+      213: 6145293500955579391
+    second: TryAgainAgain_2
+  - first:
+      213: -124298485295314191
+    second: TryAgainAgain_3
+  - first:
+      213: -4396322216327505808
+    second: TryAgainAgain_4
+  - first:
+      213: 8456613494120485758
+    second: TryAgainAgain_5
+  - first:
+      213: 3381487260494470978
+    second: TryAgainAgain_6
+  - first:
+      213: -7224619649902326721
+    second: TryAgainAgain_7
+  - first:
+      213: -8075311338484922565
+    second: TryAgainAgain_8
+  - first:
+      213: 4444595507538668685
+    second: TryAgainAgain_9
+  - first:
+      213: -3819184231680994570
+    second: TryAgainAgain_10
+  - first:
+      213: -3855897110993729651
+    second: TryAgainAgain_11
+  - first:
+      213: -4123704598775750094
+    second: TryAgainAgain_12
+  - first:
+      213: -716398915163121756
+    second: TryAgainAgain_13
+  - first:
+      213: -7345242317502014860
+    second: TryAgainAgain_14
+  - first:
+      213: -3527339882168570206
+    second: TryAgainAgain_15
+  - first:
+      213: 1252605646590978239
+    second: TryAgainAgain_16
+  - first:
+      213: 827450905888935642
+    second: TryAgainAgain_17
+  - first:
+      213: 1800560907454392574
+    second: TryAgainAgain_18
+  - first:
+      213: 7724054654774186524
+    second: TryAgainAgain_19
+  - first:
+      213: 1403754402235886304
+    second: TryAgainAgain_20
+  - first:
+      213: 5884881357688786654
+    second: TryAgainAgain_21
+  - first:
+      213: 8694591707576183882
+    second: TryAgainAgain_22
+  - first:
+      213: -6749673731871769590
+    second: TryAgainAgain_23
+  - first:
+      213: 3693704797435358171
+    second: TryAgainAgain_24
+  - first:
+      213: -405411038465723484
+    second: TryAgainAgain_25
+  - first:
+      213: -3142013829077089742
+    second: TryAgainAgain_26
+  - first:
+      213: 4120152605853921296
+    second: TryAgainAgain_27
+  - first:
+      213: 7377494547443547670
+    second: TryAgainAgain_28
+  - first:
+      213: 8160490576226076597
+    second: TryAgainAgain_29
+  - first:
+      213: 3633702469133959849
+    second: TryAgainAgain_30
+  - first:
+      213: 4281251255069024734
+    second: TryAgainAgain_31
+  - first:
+      213: -107336127532630265
+    second: TryAgainAgain_32
+  - first:
+      213: 6531784090320224196
+    second: TryAgainAgain_33
+  - first:
+      213: -7340915259042335440
+    second: TryAgainAgain_34
+  - first:
+      213: -5695149691724699722
+    second: TryAgainAgain_35
+  - first:
+      213: 2312031525595558638
+    second: TryAgainAgain_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TryAgainAgain_0
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1224
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee61174e6a8f6980800000000000000
+      internalID: -8543457761855181083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_1
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1221
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e22358acd97fff0800000000000000
+      internalID: -2359781646782844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_2
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1220
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff359f441e7784550800000000000000
+      internalID: 6145293500955579391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_3
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1222
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa8ad9af27664ef0800000000000000
+      internalID: -124298485295314191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_4
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1224
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07814a9ac302df2c0800000000000000
+      internalID: -4396322216327505808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_5
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1220
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7393d7fa2deb5570800000000000000
+      internalID: 8456613494120485758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_6
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 1218
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f184e5fb47dee20800000000000000
+      internalID: 3381487260494470978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1212
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3cc342c4befcbb90800000000000000
+      internalID: -7224619649902326721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_8
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1211
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b370cea5f1bbeef80800000000000000
+      internalID: -8075311338484922565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_9
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1209
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ca32dc0106ead30800000000000000
+      internalID: 4444595507538668685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_10
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1204
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f291ea1d288ffac0800000000000000
+      internalID: -3819184231680994570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_11
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1216
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8783c8c10a1d7ac0800000000000000
+      internalID: -3855897110993729651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_12
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1212
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232a3570488a5c6c0800000000000000
+      internalID: -4123704598775750094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_13
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 1211
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a71a387bf6de06f0800000000000000
+      internalID: -716398915163121756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_14
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1215
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a102c6705701a90800000000000000
+      internalID: -7345242317502014860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 430
+        width: 2324
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae2649d01f5c0fc0800000000000000
+      internalID: -3527339882168570206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_16
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1199
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb824b0f236226110800000000000000
+      internalID: 1252605646590978239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 847
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adec5920732bb7b00800000000000000
+      internalID: 827450905888935642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef826450b90ecf810800000000000000
+      internalID: 1800560907454392574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_19
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 744
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c129483e8ca513b60800000000000000
+      internalID: 7724054654774186524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 712
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea292101332b7310800000000000000
+      internalID: 1403754402235886304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 662
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edecb565a6c4ba150800000000000000
+      internalID: 5884881357688786654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_22
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 653
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ca225971569a870800000000000000
+      internalID: 8694591707576183882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_23
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 629
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c7ffd80875452a0800000000000000
+      internalID: -6749673731871769590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_24
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 644
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb6a4471fca24330800000000000000
+      internalID: 3693704797435358171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_25
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 420
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a37a38fec0bf5af0800000000000000
+      internalID: -405411038465723484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_26
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 427
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232ce7ec1135564d0800000000000000
+      internalID: -3142013829077089742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_27
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 420
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010b25c27f8bd2930800000000000000
+      internalID: 4120152605853921296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_28
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 427
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ef0c80430226660800000000000000
+      internalID: 7377494547443547670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_29
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 422
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7c0e461f2ef3170800000000000000
+      internalID: 8160490576226076597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_30
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 414
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2803cb4218d6230800000000000000
+      internalID: 3633702469133959849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_31
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 416
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1a59c555f0a6b30800000000000000
+      internalID: 4281251255069024734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_32
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 413
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ff9d65c5aa28ef0800000000000000
+      internalID: -107336127532630265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_33
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 416
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfb515f50f85aa50800000000000000
+      internalID: 6531784090320224196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_34
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 412
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035798a3774df1a90800000000000000
+      internalID: -7340915259042335440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_35
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 418
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7e2129783c6f0b0800000000000000
+      internalID: -5695149691724699722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TryAgainAgain_36
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 409
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2b0a04c6cf51020800000000000000
+      internalID: 2312031525595558638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TryAgainAgain_0: -8543457761855181083
+      TryAgainAgain_1: -2359781646782844
+      TryAgainAgain_10: -3819184231680994570
+      TryAgainAgain_11: -3855897110993729651
+      TryAgainAgain_12: -4123704598775750094
+      TryAgainAgain_13: -716398915163121756
+      TryAgainAgain_14: -7345242317502014860
+      TryAgainAgain_15: -3527339882168570206
+      TryAgainAgain_16: 1252605646590978239
+      TryAgainAgain_17: 827450905888935642
+      TryAgainAgain_18: 1800560907454392574
+      TryAgainAgain_19: 7724054654774186524
+      TryAgainAgain_2: 6145293500955579391
+      TryAgainAgain_20: 1403754402235886304
+      TryAgainAgain_21: 5884881357688786654
+      TryAgainAgain_22: 8694591707576183882
+      TryAgainAgain_23: -6749673731871769590
+      TryAgainAgain_24: 3693704797435358171
+      TryAgainAgain_25: -405411038465723484
+      TryAgainAgain_26: -3142013829077089742
+      TryAgainAgain_27: 4120152605853921296
+      TryAgainAgain_28: 7377494547443547670
+      TryAgainAgain_29: 8160490576226076597
+      TryAgainAgain_3: -124298485295314191
+      TryAgainAgain_30: 3633702469133959849
+      TryAgainAgain_31: 4281251255069024734
+      TryAgainAgain_32: -107336127532630265
+      TryAgainAgain_33: 6531784090320224196
+      TryAgainAgain_34: -7340915259042335440
+      TryAgainAgain_35: -5695149691724699722
+      TryAgainAgain_36: 2312031525595558638
+      TryAgainAgain_4: -4396322216327505808
+      TryAgainAgain_5: 8456613494120485758
+      TryAgainAgain_6: 3381487260494470978
+      TryAgainAgain_7: -7224619649902326721
+      TryAgainAgain_8: -8075311338484922565
+      TryAgainAgain_9: 4444595507538668685
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

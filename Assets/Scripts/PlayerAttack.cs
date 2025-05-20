@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement playerMovement;
     
     [Header("Effect Configuration")]
-    [Tooltip("Assign the Animator component from the SlashEffectGFX child GameObject here.")]
     public Animator swordEffectAnimator;
     
     private bool isCharacterCurrentlyAttacking = false;
@@ -23,10 +22,6 @@ public class PlayerAttack : MonoBehaviour
     {
         playerCharacterAnimator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
-
-        if (playerCharacterAnimator == null) Debug.LogError("PlayerAttack: PlayerCharacterAnimator (Player's own Animator) not found!");
-        if (playerMovement == null) Debug.LogError("PlayerAttack: PlayerMovement component not found!");
-        if (swordEffectAnimator == null) Debug.LogError("PlayerAttack: SwordEffectAnimator (for slash visual) has NOT been assigned in the Inspector!");
     }
     
     public void OnAttack(InputAction.CallbackContext context)

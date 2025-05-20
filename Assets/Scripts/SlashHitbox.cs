@@ -11,7 +11,6 @@ public class SlashHitbox : MonoBehaviour
         
         if (damageableObject != null)
         {
-            // Needed to prevent player from damaging themselves if hitbox accidentally overlaps player collider
             if (other.CompareTag("Player") && gameObject.transform.root.CompareTag("Player"))
             {
                 return;

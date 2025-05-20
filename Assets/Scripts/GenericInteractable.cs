@@ -5,15 +5,11 @@ using Unity.Cinemachine;
 public class GenericInteractable : MonoBehaviour, IInteractable
 {
     public enum Mode { Nothing, LoadScene, Teleport }
-    [Header("What this does when you press E:")]
     public Mode mode = Mode.Nothing;
-
-    [Header("→ Scene Loading")]
+    
     public int sceneBuildIndex;
-    [Tooltip("Optional: which SpawnPoint.spawnID to use in the next scene")]
     public string spawnPointID;
-
-    [Header("→ Teleporting (Teleport only)")]
+    
     public Transform teleportDestination;
     public PolygonCollider2D newMapBoundary;
     
