@@ -7,12 +7,17 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 4f;
+    public float baseSpeed = 4f; // set in inspector or Start()
 
     private Rigidbody2D rigidBody;
     private Vector2 moveInput;
     private Animator animator;
     private Camera mainCamera;
     public SlashHitbox slashHitbox;
+    public PlayerHealth playerHealth;
+    public HealthBar healthBar;
+    private Coroutine activeSpeedBoost;
+    private Coroutine activeSlowness;
 
     private bool canMove = true; // Controls if movement logic is active (e.g., restricted during attacks)
     
@@ -115,38 +120,55 @@ public class PlayerMovement : MonoBehaviour
             ActivateDamageBoost();
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("Pill"))
+        {
+            ActivateHealthBoost();
+            Destroy(other.gameObject);
+        }
     }
     
     public void ActivateSpeedBoost()
     {
-        StopCoroutine("SpeedBoostRoutine"); 
-        StartCoroutine(SpeedBoostRoutine());
+        if (activeSpeedBoost != null)
+            StopCoroutine(activeSpeedBoost);
+
+        if (activeSlowness != null)
+        {
+            StopCoroutine(activeSlowness);
+            activeSlowness = null;
+        }
+
+        activeSpeedBoost = StartCoroutine(SpeedBoostRoutine());
     }
 
     private IEnumerator SpeedBoostRoutine()
     {
-        float originalSpeed = moveSpeed;
-        moveSpeed = 8f;
-
+        moveSpeed = baseSpeed * 2f; // e.g., 8f if baseSpeed is 4
         yield return new WaitForSeconds(5f);
-
-        moveSpeed = originalSpeed;
+        moveSpeed = baseSpeed;
+        activeSpeedBoost = null;
     }
     
     public void ActivateSlowness()
     {
-        StopCoroutine("SlownessRoutine"); 
-        StartCoroutine(SlownessRoutine());
+        if (activeSlowness != null)
+            StopCoroutine(activeSlowness);
+
+        if (activeSpeedBoost != null)
+        {
+            StopCoroutine(activeSpeedBoost);
+            activeSpeedBoost = null;
+        }
+
+        activeSlowness = StartCoroutine(SlownessRoutine());
     }
 
     private IEnumerator SlownessRoutine()
     {
-        float originalSpeed = moveSpeed;
-        moveSpeed = 2f;
-
+        moveSpeed = baseSpeed * 0.5f; // e.g., 2f if baseSpeed is 4
         yield return new WaitForSeconds(5f);
-
-        moveSpeed = originalSpeed;
+        moveSpeed = baseSpeed;
+        activeSlowness = null;
     }
     
     private IEnumerator DamageBoostRoutine()
@@ -158,12 +180,25 @@ public class PlayerMovement : MonoBehaviour
 
         SlashHitbox.damageAmount = 5;
     }
-    
+
+    private IEnumerator HealthBoostRoutine()
+    {
+        PlayerHealth.currentHealth = PlayerHealth.maxHealth;
+        yield return new WaitForSeconds(.1f);
+    }
+
     public void ActivateDamageBoost()
     {
         StopCoroutine("DamageBoostRoutine");
         StartCoroutine(DamageBoostRoutine());
     }
+    
+    public void ActivateHealthBoost()
+    {
+        StopCoroutine("HealthBoostRoutine"); 
+        StartCoroutine(HealthBoostRoutine());
+    }
+    
 
 
 }
