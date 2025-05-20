@@ -1,8 +1,15 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
+    
+    public GameObject slashHitbox_UR;
+    public GameObject slashHitbox_UL;
+    public GameObject slashHitbox_DL;
+    public GameObject slashHitbox_DR;
+    
     // Renamed 'animator' to 'playerCharacterAnimator' for clarity
     private Animator playerCharacterAnimator;
     private PlayerMovement playerMovement; // To interact with movement state
@@ -40,6 +47,15 @@ public class PlayerAttack : MonoBehaviour
                                                               // The sword effect itself will be triggered by an Animation Event
         }
     }
+    
+    private GameObject GetHitboxByDirection(float x, float y)
+    {
+        if (x > 0 && y >= 0) return slashHitbox_UR;     // Right or UpRight
+        if (x <= 0 && y > 0) return slashHitbox_UL;     // Up or UpLeft
+        if (x < 0 && y <= 0) return slashHitbox_DL;     // Left or DownLeft
+        if (x >= 0 && y < 0) return slashHitbox_DR;     // Down or DownRight
+        return null;
+    }
 
     // --- Animation Event Methods for PLAYER'S CharSlash animations ---
 
@@ -57,21 +73,18 @@ public class PlayerAttack : MonoBehaviour
     // --- NEW METHOD: Called from an Animation Event on Player's CharSlash animations AT THE POINT OF IMPACT ---
     public void TriggerSwordEffectVisual()
     {
-        if (swordEffectAnimator == null || playerCharacterAnimator == null)
-        {
-            if (swordEffectAnimator == null) Debug.LogError("PlayerAttack: SwordEffectAnimator is null when trying to TriggerSwordEffectVisual. Assign it in Inspector.");
-            if (playerCharacterAnimator == null) Debug.LogError("PlayerAttack: PlayerCharacterAnimator is null when trying to TriggerSwordEffectVisual.");
-            return;
-        }
+        if (swordEffectAnimator == null || playerCharacterAnimator == null) return;
 
-        // Get the direction player is facing (which was set by UpdateAimDirectionTowardsMouse in OnAttack)
         float aimX = playerCharacterAnimator.GetFloat("LastInputX");
         float aimY = playerCharacterAnimator.GetFloat("LastInputY");
 
         swordEffectAnimator.SetFloat("LastInputX", aimX);
         swordEffectAnimator.SetFloat("LastInputY", aimY);
-        swordEffectAnimator.SetTrigger("PlaySlash"); // "PlaySlash" must match trigger name in SlashEffectAnimatorController
-        // Debug.Log($"Sword Effect Triggered: AimX={aimX}, AimY={aimY}");
+        swordEffectAnimator.SetTrigger("PlaySlash");
+
+        GameObject hitbox = GetHitboxByDirection(aimX, aimY);
+        if (hitbox != null)
+            StartCoroutine(ActivateHitbox(hitbox, 0.15f)); // Keep it active for 0.15s
     }
 
     // Called from END Animation Event on each of Player's CharSlash animations
@@ -83,5 +96,12 @@ public class PlayerAttack : MonoBehaviour
         {
             playerMovement.SetMovementEnabled(true); // Re-enable player movement
         }
+    }
+    
+    private IEnumerator ActivateHitbox(GameObject hitbox, float duration)
+    {
+        hitbox.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        hitbox.SetActive(false);
     }
 }

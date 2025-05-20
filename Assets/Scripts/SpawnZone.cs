@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(PolygonCollider2D))]
 public class SpawnZone : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     public int maxEnemies = 15;
     public float spawnInterval = 2f;
+    
+    public Tilemap collisionTilemap;
+    public LayerMask noSpawnLayerMask;
 
     private float spawnTimer;
     private bool playerInside = false;
@@ -17,13 +22,12 @@ public class SpawnZone : MonoBehaviour
     void Awake()
     {
         area = GetComponent<PolygonCollider2D>();
-        area.isTrigger = true; // Set this in Inspector too
+        area.isTrigger = true;
         player = FindFirstObjectByType<PlayerMovement>().transform;
     }
 
     void Update()
     {
-        // Clean dead enemies
         activeEnemies.RemoveAll(e => e == null);
 
         if (playerInside && activeEnemies.Count < maxEnemies)
@@ -40,25 +44,47 @@ public class SpawnZone : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-        Vector2 spawnPos = GetRandomPointInZone();
-        GameObject newEnemy = Instantiate(prefab, spawnPos, Quaternion.identity);
-        activeEnemies.Add(newEnemy);
+        Vector2 spawnPos = GetValidSpawnPosition();
+
+        if (spawnPos != Vector2.zero)
+        {
+            GameObject newEnemy = Instantiate(prefab, spawnPos, Quaternion.identity);
+            activeEnemies.Add(newEnemy);
+        }
     }
 
-    private Vector2 GetRandomPointInZone()
+    private Vector2 GetValidSpawnPosition()
     {
         Bounds bounds = area.bounds;
         Vector2 point;
         int attempts = 0;
+
         do
         {
-            point = new Vector2(
-                Random.Range(bounds.min.x, bounds.max.x),
-                Random.Range(bounds.min.y, bounds.max.y)
-            );
+            float x = Random.Range(bounds.min.x, bounds.max.x);
+            float y = Random.Range(bounds.min.y, bounds.max.y);
+            point = new Vector2(x, y);
+
+            bool isInsideZone = area.OverlapPoint(point);
+            bool overlapsBlockedTile = IsTileBlocked(point);
+            bool overlapsPhysicsCollider = Physics2D.OverlapCircle(point, 0.4f, noSpawnLayerMask);
+
+            if (isInsideZone && !overlapsBlockedTile && !overlapsPhysicsCollider)
+                return point;
+
             attempts++;
-        } while (!area.OverlapPoint(point) && attempts < 20);
-        return point;
+        } while (attempts < 20);
+
+        return Vector2.zero; // fallback
+    }
+
+    private bool IsTileBlocked(Vector2 worldPosition)
+    {
+        if (collisionTilemap == null)
+            return false;
+
+        Vector3Int cellPos = collisionTilemap.WorldToCell(worldPosition);
+        return collisionTilemap.HasTile(cellPos);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -66,7 +92,7 @@ public class SpawnZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = true;
-            spawnTimer = 0.5f; // optional: delay before first spawn
+            spawnTimer = 0.5f;
         }
     }
 
