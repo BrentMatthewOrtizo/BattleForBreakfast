@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  bloodPrefab: {fileID: 5528875228338012417, guid: 99af0ab6fc9d30645823ee6723607a30, type: 3}
 --- !u!1 &1589548062446400226
 GameObject:
   m_ObjectHideFlags: 0

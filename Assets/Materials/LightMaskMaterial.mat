@@ -47,7 +47,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DarknessColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PlayerWorldPos: {r: -10.565789, g: -2.9924119, b: -10, a: 0}
+    - _PlayerWorldPos: {r: 1.1374738, g: 3.6188881, b: -10, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

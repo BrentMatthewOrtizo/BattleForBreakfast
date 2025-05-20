@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public HealthBar healthBar;
     public PlayerMovement playerMovement;
     public GameObject diePanel;
+    public GameObject bloodPrefab;
 
     // public GameObject gameOverScreen; later for game over screen
 
@@ -43,7 +44,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     
     void Die()
     {
-        //TO DO 
+        Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         diePanel.SetActive(true);
         Debug.Log(gameObject.name + " has died!");
         playerMovement.SetMovementEnabled(false);

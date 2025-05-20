@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [Tooltip("Starting and maximum health for this enemy type.")]
     public int maxHealth = 10; // Default val
     public int currentHealth;
+    public GameObject bloodPrefab;
 
     // TODO: SCORE implementation
     // public int scoreValue = 10;
@@ -30,11 +31,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     void Die()
     {
+        Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         Debug.Log(gameObject.name + " has died!");
-        //TODO:
-        // - Play death animation
-        // - Drop loot/score
-        // - Destroy the GameObject
-        Destroy(gameObject); // Or Destroy(gameObject, 1f); after death animation
+        Destroy(gameObject);
     }
 }
