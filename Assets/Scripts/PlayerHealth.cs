@@ -4,12 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour, IDamageable 
 {
-    public static int maxHealth = 100;
-    public static int currentHealth;
+    public int maxHealth = 100;
+    public int currentHealth;
     public HealthBar healthBar;
     public PlayerMovement playerMovement;
     public GameObject diePanel;
     public GameObject bloodPrefab;
+
+    // public GameObject gameOverScreen; later for game over screen
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
     
+    // HP add-on for testing
     public void TakeDamage(int damageAmount)
     {
         if (currentHealth <= 0) return; // dead
@@ -34,7 +37,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         
         if (currentHealth <= 0)
         {
-            currentHealth = 0; // Health stay at 0
+            currentHealth = 0; // Clamp health at 0
             Die();
         }
     }
@@ -43,6 +46,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         diePanel.SetActive(true);
+        Debug.Log(gameObject.name + " has died!");
         playerMovement.SetMovementEnabled(false);
         StartCoroutine(GoToGameOverScene());
     }

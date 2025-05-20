@@ -282,6 +282,8 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   bloodPrefab: {fileID: 5528875228338012417, guid: 99af0ab6fc9d30645823ee6723607a30, type: 3}
+  flashMaterial: {fileID: 2100000, guid: a645e8a14d2bd4f47bd130927fee4998, type: 2}
+  flashDuration: 0.1
 --- !u!1 &655603494479677516
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable 
 {
-    public int maxHealth = 10;
+    [Tooltip("Starting and maximum health for this enemy type.")]
+    public int maxHealth = 10; // Default val
     public int currentHealth;
     public GameObject bloodPrefab;
 
-    void Awake()
+    // TODO: SCORE implementation
+    // public int scoreValue = 10;
+
+    void Awake() // awake instead of start so that hp is set before 
     {
         currentHealth = maxHealth;
     }
@@ -16,6 +20,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if (currentHealth <= 0) return; // dead
 
         currentHealth -= damageAmount;
+        Debug.Log(gameObject.name + " took " + damageAmount + " damage. Current Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -27,6 +32,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     void Die()
     {
         Instantiate(bloodPrefab, transform.position, Quaternion.identity);
+        Debug.Log(gameObject.name + " has died!");
         Destroy(gameObject);
     }
 }
