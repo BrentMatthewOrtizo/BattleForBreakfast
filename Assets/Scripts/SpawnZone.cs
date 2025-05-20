@@ -86,7 +86,7 @@ public class SpawnZone : MonoBehaviour
     {
         if (powerUpPrefabs.Length != spawnWeights.Length || powerUpPrefabs.Length == 0)
         {
-            Debug.LogWarning("Power-up arrays misconfigured.");
+            //Debug.LogWarning("Power-up arrays misconfigured.");
             return null;
         }
 
