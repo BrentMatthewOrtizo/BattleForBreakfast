@@ -14,8 +14,7 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Effect Configuration")]
     public Animator swordEffectAnimator;
-
-    // --- NEW: Audio Components for Sword SFX ---
+    
     [Header("Audio")]
     public AudioClip sword_sfx; // Assign the sound effect in the Inspector
     private AudioSource audioSource; // AudioSource for playing the sound
