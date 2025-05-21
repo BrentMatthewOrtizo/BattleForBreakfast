@@ -82,7 +82,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
        if (spriteRenderer != null)
        {
            spriteRenderer.material = originalMaterial;
-           // }
        }
        flashCoroutine = null;
    }

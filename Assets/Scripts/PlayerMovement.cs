@@ -25,10 +25,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         currentMoveSpeed = baseMoveSpeed;
-        // Assuming SlashHitbox.damageAmount is static and should be initialized
-        // or controlled based on the player's base damage.
-        // If SlashHitbox is a component on the player, you might initialize it here or it has its own logic.
-        // For now, let's assume the game logic ensures SlashHitbox.damageAmount reflects basePlayerAttackDamage initially.
     }
 
     void Update()

@@ -13,9 +13,9 @@ public class GenericInteractable : MonoBehaviour, IInteractable
     public Transform teleportDestination;
     public PolygonCollider2D newMapBoundary;
     
-    Transform              _player;
+    Transform _player;
     CinemachineConfiner2D _confiner;
-    bool                  _didCacheTeleportRefs = false;
+    bool _didCacheTeleportRefs = false;
     
     void CacheTeleportRefsIfNeeded()
     {
@@ -47,7 +47,6 @@ public class GenericInteractable : MonoBehaviour, IInteractable
 
                 if (_player == null)
                 {
-                    Debug.LogError($"[{name}] cannot teleport: no Player found.");
                     return;
                 }
 
@@ -56,13 +55,10 @@ public class GenericInteractable : MonoBehaviour, IInteractable
 
                 if (teleportDestination != null)
                     _player.position = teleportDestination.position;
-                else
-                    Debug.LogWarning($"[{name}] has mode=Teleport but no destination set.");
                 break;
 
             case Mode.Nothing:
             default:
-                Debug.Log($"[{name}] does nothing on interact.");
                 break;
         }
     }
