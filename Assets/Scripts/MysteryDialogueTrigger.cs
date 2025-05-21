@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MysteryDialogueTrigger : MonoBehaviour, IInteractable
@@ -132,6 +133,7 @@ public class MysteryDialogueTrigger : MonoBehaviour, IInteractable
         dialoguePanel.SetActive(false);
         isActive = isTyping = false;
         ToggleMovement(true);
+        SceneManager.LoadScene(5);
     }
 
     void ToggleMovement(bool on)

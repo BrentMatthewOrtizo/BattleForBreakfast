@@ -30,7 +30,10 @@ public class GenericInteractable : MonoBehaviour, IInteractable
         _didCacheTeleportRefs = true;
     }
 
-    public bool CanInteract() => true;
+    public bool CanInteract()
+    {
+        return true;
+    }
 
     public void Interact()
     {
