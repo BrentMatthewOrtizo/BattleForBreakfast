@@ -17,7 +17,9 @@ public class SpawnZone : MonoBehaviour
     public Tilemap collisionTilemap;
     public LayerMask noSpawnLayerMask;
 
-    private float spawnTimer;
+    private float enemySpawnTimer;
+    private float powerUpSpawnTimer;
+
     private bool playerInside = false;
 
     private PolygonCollider2D area;
@@ -35,25 +37,30 @@ public class SpawnZone : MonoBehaviour
     void Update()
     {
         activeEnemies.RemoveAll(e => e == null);
-
-        if (playerInside && activeEnemies.Count < maxEnemies)
-        {
-            spawnTimer -= Time.deltaTime;
-            if (spawnTimer <= 0f)
-            {
-                SpawnEnemy();
-                spawnTimer = enemySpawnInterval;
-            }
-        }
         activePowerUps.RemoveAll(e => e == null);
 
-        if (playerInside && activePowerUps.Count < maxPowerUps)
+        if (playerInside)
         {
-            spawnTimer -= Time.deltaTime;
-            if (spawnTimer <= 0f)
+            // Enemy Spawning
+            if (activeEnemies.Count < maxEnemies)
             {
-                SpawnPowerUp();
-                spawnTimer = powerUpSpawnInterval;
+                enemySpawnTimer -= Time.deltaTime;
+                if (enemySpawnTimer <= 0f)
+                {
+                    SpawnEnemy();
+                    enemySpawnTimer = enemySpawnInterval;
+                }
+            }
+
+            // Power-up Spawning
+            if (activePowerUps.Count < maxPowerUps)
+            {
+                powerUpSpawnTimer -= Time.deltaTime;
+                if (powerUpSpawnTimer <= 0f)
+                {
+                    SpawnPowerUp();
+                    powerUpSpawnTimer = powerUpSpawnInterval;
+                }
             }
         }
     }
@@ -150,7 +157,8 @@ public class SpawnZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = true;
-            spawnTimer = 0.5f;
+            enemySpawnTimer = 0.5f;
+            powerUpSpawnTimer = 0.5f;
         }
     }
 

@@ -6,32 +6,40 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 4f;
+    public float baseMoveSpeed = 4f;
+    private float currentMoveSpeed;
+    public int basePlayerAttackDamage = 5;
 
     private Rigidbody2D rigidBody;
     private Vector2 moveInput;
     private Animator animator;
     private Camera mainCamera;
-    public SlashHitbox slashHitbox;
+    public PlayerHealth playerHealth;
+    public HealthBar healthBar;
 
     private bool canMove = true;
-    
+
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
+        currentMoveSpeed = baseMoveSpeed;
+        // Assuming SlashHitbox.damageAmount is static and should be initialized
+        // or controlled based on the player's base damage.
+        // If SlashHitbox is a component on the player, you might initialize it here or it has its own logic.
+        // For now, let's assume the game logic ensures SlashHitbox.damageAmount reflects basePlayerAttackDamage initially.
     }
 
     void Update()
     {
         if (canMove)
         {
-            rigidBody.linearVelocity = moveInput * moveSpeed;
-            
+            rigidBody.linearVelocity = moveInput * currentMoveSpeed;
+
             if (moveInput == Vector2.zero && !animator.GetBool("isWalking"))
             {
-                    UpdateAimDirectionTowardsMouse();
+                UpdateAimDirectionTowardsMouse();
             }
         }
         else
@@ -39,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.linearVelocity = Vector2.zero;
         }
     }
-    
+
     public void UpdateAimDirectionTowardsMouse()
     {
         if (mainCamera == null || animator == null) return;
@@ -54,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("LastInputY", directionToMouse.y);
         }
     }
-    
+
     public void Move(InputAction.CallbackContext context)
     {
         if (animator == null) return;
@@ -78,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
-    
+
     public void SetMovementEnabled(bool enabled)
     {
         canMove = enabled;
@@ -91,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("RedBull"))
@@ -109,54 +117,58 @@ public class PlayerMovement : MonoBehaviour
             ActivateDamageBoost();
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("Pill"))
+        {
+            ActivateHealthBoost();
+            Destroy(other.gameObject);
+        }
     }
-    
+
     public void ActivateSpeedBoost()
     {
-        StopCoroutine("SpeedBoostRoutine"); 
+        StopCoroutine("SpeedBoostRoutine");
+        StopCoroutine("SlownessRoutine");
         StartCoroutine(SpeedBoostRoutine());
     }
 
     private IEnumerator SpeedBoostRoutine()
     {
-        float originalSpeed = moveSpeed;
-        moveSpeed = 8f;
-
+        currentMoveSpeed = baseMoveSpeed * 2f;
         yield return new WaitForSeconds(5f);
-
-        moveSpeed = originalSpeed;
+        currentMoveSpeed = baseMoveSpeed;
     }
-    
+
     public void ActivateSlowness()
     {
-        StopCoroutine("SlownessRoutine"); 
+        StopCoroutine("SpeedBoostRoutine");
+        StopCoroutine("SlownessRoutine");
         StartCoroutine(SlownessRoutine());
     }
 
     private IEnumerator SlownessRoutine()
     {
-        float originalSpeed = moveSpeed;
-        moveSpeed = 2f;
-
+        currentMoveSpeed = baseMoveSpeed * 0.5f;
         yield return new WaitForSeconds(5f);
-
-        moveSpeed = originalSpeed;
+        currentMoveSpeed = baseMoveSpeed;
     }
-    
-    private IEnumerator DamageBoostRoutine()
-    {
-        int currentDamage = SlashHitbox.damageAmount;
-        SlashHitbox.damageAmount = 10;
 
-        yield return new WaitForSeconds(5f);
-
-        SlashHitbox.damageAmount = 5;
-    }
-    
     public void ActivateDamageBoost()
     {
         StopCoroutine("DamageBoostRoutine");
         StartCoroutine(DamageBoostRoutine());
+    }
+
+    private IEnumerator DamageBoostRoutine()
+    {
+        int boostedDamage = basePlayerAttackDamage * 2;
+        SlashHitbox.damageAmount = boostedDamage;
+        yield return new WaitForSeconds(5f);
+        SlashHitbox.damageAmount = basePlayerAttackDamage;
+    }
+
+    public void ActivateHealthBoost()
+    {
+        PlayerHealth.currentHealth = PlayerHealth.maxHealth;
     }
     
 }
